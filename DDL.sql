@@ -34,16 +34,18 @@ CREATE TABLE cursos_has_docentes (
     FOREIGN KEY (id_docente) REFERENCES docentes(id_docente)
 );
 
-CREATE TABLE Estudiantes_has_Cursos (
-    id_estudiante_has_curso INT PRIMARY KEY AUTO_INCREMENT,
-    id_estudiante INT,
-    id_curso INT,
-    FOREIGN KEY (id_estudiante) REFERENCES estudiantes(id_estudiante),
-    FOREIGN KEY (id_curso) REFERENCES cursos(id_curso)
-);
-
 CREATE TABLE Estudiantes (
     id_estudiante INT PRIMARY KEY AUTO_INCREMENT,
     nombre_estudiante VARCHAR(200) NOT NULL
 );
+
+CREATE TABLE Estudiantes_has_Cursos (
+    id_estudiante_has_curso INT PRIMARY KEY AUTO_INCREMENT,
+    id_estudiante INT,
+    id_curso INT,
+    FOREIGN KEY (id_estudiante) REFERENCES Estudiantes (id_estudiante),
+    FOREIGN KEY (id_curso) REFERENCES cursos(id_curso)
+);
+
+
 
