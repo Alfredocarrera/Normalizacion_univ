@@ -19,3 +19,8 @@ FROM docentes d
 INNER JOIN cursos_has_docentes chd ON d.id_docente = chd.id_docente
 INNER JOIN cursos c ON chd.id_curso = c.id_curso;
 
+--4. Estudiantes inscritos por curso
+SELECT c.nombre_curso, COUNT(ehc.id_estudiante) AS total_estudiantes
+FROM cursos c
+LEFT JOIN Estudiantes_has_Cursos ehc ON c.id_curso = ehc.id_curso
+GROUP BY c.id_curso, c.nombre_curso;
