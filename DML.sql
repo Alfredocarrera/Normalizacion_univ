@@ -23,7 +23,7 @@ INSERT INTO estudiantes (id_estudiante, nombre_estudiante) VALUES
 (7, 'Carolina Sánchez'),
 (8, 'Mario López');
 
-INSERT INTO estudiantes_has_curso (id_estudiante, id_curso) VALUES 
+INSERT INTO estudiantes_has_cursos (id_estudiante_has_curso, id_curso) VALUES 
 (1, 1), 
 (2, 1),
 (3, 2),
